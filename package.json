@@ -1,0 +1,76 @@
+{
+  "private": false,
+  "name": "glob-concat-cli",
+  "version": "1.0.0",
+  "description": "A concatenation tool leveraging fast-glob for CLIs",
+  "license": "Apache-2.0",
+  "author": "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castastrophe/glob-concat-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/castastrophe/glob-concat-cli/issues"
+  },
+  "type": "module",
+  "module": "index.js",
+  "bin": {
+    "glob-concat": "./cli.js"
+  },
+  "scripts": {
+    "coverage": "c8 yarn test",
+    "prepare": "husky install",
+    "prepublishOnly": "yarn test",
+    "semantic-release": "semantic-release",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.2",
+    "@semantic-release/release-notes-generator": "^11.0.1",
+    "ava": "^5.2.0",
+    "c8": "^7.13.0",
+    "chalk": "^5.3.0",
+    "concat-with-sourcemaps": "^1.1.0",
+    "fast-glob": "^3.2.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "merge-source-map": "1.1.0",
+    "mock-fs": "^5.2.0",
+    "prettier": "^2.8.7",
+    "prettier-package-json": "^2.8.0",
+    "semantic-release": "^21.0.2",
+    "yargs": "^17.7.2"
+  },
+  "keywords": [
+    "cli",
+    "concat",
+    "globbing"
+  ],
+  "engines": {
+    "node": ">=14 <=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": " https://github.com/sponsors/castastrophe"
+    }
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier-package-json --write"
+    ]
+  }
+}
