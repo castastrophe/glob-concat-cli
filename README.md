@@ -63,3 +63,15 @@ Due to how this utility is built, the following options are not supported:
 - `onlyDirectories` (this is always set to `false` because this utility is meant to concatenate files)
 - `stats`
 - `objectMode`
+
+## Contributing
+
+Contributions are welcome! Please open an [issue](https://github.com/castastrophe/glob-concat-cli/issues/new) or submit a pull request.
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details. This means you can use this however you like as long as you provide attribution back to this one. It's nice to share but it's also nice to get credit for your work. 😉
+
+## Funding ☕️
+
+I am gainfully employed at the moment, however, if you find this plugin useful and would like to buy me a coffee/beer as a small thank you, I would greatly appreciate it! Funding links are available in the GitHub UI for this repo.

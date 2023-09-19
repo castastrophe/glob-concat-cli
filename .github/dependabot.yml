@@ -5,7 +5,28 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+    rebase-strategy: "auto"
+    versioning-strategy: "increase"
+    groups:
+      semantic-release-ecosystem:
+        patterns:
+          - "semantic-release"
+          - "@semantic-release/*"
+          - "@types/semantic-release*"
+      commitlint-ecosystem:
+        patterns:
+          - "@commitlint/*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "monthly"
