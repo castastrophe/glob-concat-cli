@@ -159,11 +159,11 @@ export default async function (
 		/** If no output file name is provided, we'll add the sourcemap to the stdout */
 		if (!isEmpty(sourcemap)) {
 			if (!outputFile && inline) content += `${inline}\n`;
-			else if (outputFile) await fsp.writeFile(`${outputFile}.map`, sourcemap);
+			else if (outputFile) await fsp.writeFile(`${outputFile}.map`, sourcemap, "utf-8");
 		}
 
 		// Inject trailing newline as well
-		if (outputFile) await fsp.writeFile(outputFile, content);
+		if (outputFile) await fsp.writeFile(outputFile, content, "utf-8");
 
 		results.map = sourcemap;
 	}

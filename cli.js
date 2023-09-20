@@ -83,7 +83,7 @@ yargs
 			})
 				.then((result) => {
 					if (result.content && !output) {
-						process.stdout.write(result.content);
+						process.stdout.write(result.content, "utf8");
 					}
 				})
 				.catch((error) => {
