@@ -21,7 +21,7 @@ import globConcat, { MESSAGES } from "./index.js";
 
 function readFile(filename) {
 	return mock.bypass(() =>
-		fs.readFileSync(join(process.cwd(), filename), "utf8")
+		fs.readFileSync(join(process.cwd(), filename), "utf-8")
 	);
 }
 
