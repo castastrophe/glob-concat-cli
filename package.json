@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "glob-concat-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A concatenation tool leveraging fast-glob for CLIs",
   "license": "Apache-2.0",
   "author": "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)",
