@@ -43,7 +43,7 @@
     "c8": "^10.1.2",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "mock-fs": "^5.3.0",
+    "mock-fs": "^5.4.1",
     "prettier": "^3.3.3",
     "prettier-package-json": "^2.8.0",
     "semantic-release": "^24.1.2"
