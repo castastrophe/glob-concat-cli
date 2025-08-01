@@ -47,7 +47,7 @@ jobs:
           format: "markdown"
           output: "both"
       - name: Add coverage PR comment
-        uses: marocchino/sticky-pull-request-comment@v2.9.3
+        uses: marocchino/sticky-pull-request-comment@v2.9.4
         with:
           recreate: true
           path: code-coverage-results.md
