@@ -18,11 +18,11 @@ import fg from "fast-glob";
 import Concat from "concat-with-sourcemaps";
 
 const MESSAGES = {
-	no_input_files: `No files provided to concatenate.`,
-	base64_conversion_failed: `Failed to convert sourcemap to base64.`,
+	no_input_files: "No files provided to concatenate.",
+	base64_conversion_failed: "Failed to convert sourcemap to base64.",
 	no_found_files: (files, cwd) =>
 		`No files found matching the provided glob pattern(s): ${chalk.yellow(
-			files.map((f) => relative(cwd, f)).join(", ")
+			files.map((f) => relative(cwd, f)).join(", "),
 		)}; use --allowEmpty to suppress this error.`,
 	empty_file: (f, cwd) => `File ${relative(cwd, f)} is empty.`,
 };
@@ -44,7 +44,7 @@ export default async function (
 		cwd = process.cwd(),
 		/** @link https://github.com/mrmlnc/fast-glob#options-3 */
 		...fgOpts
-	} = {}
+	} = {},
 ) {
 	/** @todo throw a warning here that no files were provided */
 	if (!files || !files.length)
@@ -54,7 +54,7 @@ export default async function (
 
 	if (typeof files === "string") files = [files];
 
-	const concat = new Concat(map, outputFile ?? "stdout", `\n\n`);
+	const concat = new Concat(map, outputFile ?? "stdout", "\n\n");
 
 	const checkInputFiles = (files) => {
 		return files.reduce((acc, file) => {
@@ -73,7 +73,10 @@ export default async function (
 		let base64;
 		try {
 			base64 = Buffer.from(sourcemap)?.toString("base64");
-		} catch (e) {}
+		}
+		catch (e) {
+			/* empty */
+		}
 
 		// Warn if the base64 conversion failed, but don't throw an error because we don't want to break a build over this
 		if (!base64) console.warn(MESSAGES.base64_conversion_failed);
@@ -119,7 +122,8 @@ export default async function (
 	if (!inputFiles.length) {
 		if (!allowEmpty) {
 			return Promise.reject(new Error(MESSAGES.no_found_files(files)));
-		} else {
+		}
+		else {
 			return Promise.resolve(results);
 		}
 	}
@@ -137,9 +141,10 @@ export default async function (
 					/** @todo incorporate existing sourcemaps when provided */
 					concat.add(
 						file,
-						`${header(relative(cwd, file)) ?? ""}\n${content.trim()}`
+						`${header(relative(cwd, file)) ?? ""}\n${content.trim()}`,
 					);
-				} else if (!allowEmpty) {
+				}
+				else if (!allowEmpty) {
 					/** throw an error if no file is found and we're not supporting empty results */
 					return Promise.reject(new Error(MESSAGES.empty_file(file, cwd)));
 				}
@@ -159,7 +164,8 @@ export default async function (
 		/** If no output file name is provided, we'll add the sourcemap to the stdout */
 		if (!isEmpty(sourcemap)) {
 			if (!outputFile && inline) content += `${inline}\n`;
-			else if (outputFile) await fsp.writeFile(`${outputFile}.map`, sourcemap, "utf-8");
+			else if (outputFile)
+				await fsp.writeFile(`${outputFile}.map`, sourcemap, "utf-8");
 		}
 
 		// Inject trailing newline as well

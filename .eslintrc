@@ -1,0 +1,100 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"es2022": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
+		"func-call-spacing": ["warn", "never"],
+		"indent": ["warn", "tab", { "ignoredNodes": ["TemplateLiteral *"], "SwitchCase": 1 }],
+		"linebreak-style": ["warn", "unix"],
+		"no-console": ["warn", { "allow": ["warn", "error"] }],
+		"quotes": ["warn", "double"],
+		"semi": ["warn", "always"],
+		"space-before-blocks": ["warn", "always"]
+	},
+	"overrides": [
+		{
+			"files": ["*.json"],
+			"parser": "jsonc-eslint-parser",
+			"extends": ["plugin:jsonc/recommended-with-jsonc"],
+		},
+		{
+			"files": ["package.json"],
+			"parser": "jsonc-eslint-parser",
+			"rules": {
+				"jsonc/sort-keys": [
+					"warn",
+					{
+						"pathPattern": "^$",
+						"order": [
+							"$schema",
+							"private",
+							"name",
+							"version",
+							"description",
+							"license",
+							"author",
+							"maintainers",
+							"contributors",
+							"homepage",
+							"repository",
+							"bugs",
+							"type",
+							"exports",
+							"main",
+							"module",
+							"browser",
+							"man",
+							"preferGlobal",
+							"bin",
+							"files",
+							"directories",
+							"scripts",
+							"config",
+							"sideEffects",
+							"types",
+							"typings",
+							"workspaces",
+							"resolutions",
+							"dependencies",
+							"bundleDependencies",
+							"bundledDependencies",
+							"peerDependencies",
+							"peerDependenciesMeta",
+							"optionalDependencies",
+							"devDependencies",
+							"keywords",
+							"engines",
+							"engineStrict",
+							"os",
+							"cpu",
+							"publishConfig"
+						]
+					},
+					{
+						"pathPattern": "^repository$",
+						"order": ["type", "url", "directory"]
+					},
+					{
+						"pathPattern": "^spectrum$",
+						"order": { "type": "asc" }
+					},
+					{
+						"pathPattern": "^exports$",
+						"order": ["."]
+					},
+					{
+						"pathPattern": ".*",
+						"order": { "type": "asc" }
+					}
+				]
+			}
+		}
+	]
+}

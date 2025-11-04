@@ -89,11 +89,11 @@ yargs
 				.catch((error) => {
 					console.error(error.message);
 					process.exit(1);
-				})
+				}),
 	)
 	.example(
 		"glob-concat *.css -o index.css",
-		"This will concatenate the found *.css files to index.css"
+		"This will concatenate the found *.css files to index.css",
 	)
 	.showHelpOnFail(true, "Specify --help for available options")
 	.help(true)
