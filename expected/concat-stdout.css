@@ -1,11 +1,11 @@
 /* Source: fixtures/file-1.css */
 .elementary {
-    background-color: hotpink;
-    color: white;
+	background-color: hotpink;
+	color: white;
 }
 
 /* Source: fixtures/file-2.css */
 .watson {
-    background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
 }

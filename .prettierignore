@@ -1,0 +1,25 @@
+# Tooling config files
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*~
+*.swp
+
+# Test files
+expected/*
+fixtures/*
+
+# JS and JSON files (linted by ESLint)
+*.js
+*.json
+
+# Package files
+package.json
+yarn.lock

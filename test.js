@@ -21,7 +21,7 @@ import globConcat, { MESSAGES } from "./index.js";
 
 function readFile(filename) {
 	return mock.bypass(() =>
-		fs.readFileSync(join(process.cwd(), filename), "utf-8")
+		fs.readFileSync(join(process.cwd(), filename), "utf-8"),
 	);
 }
 
@@ -37,13 +37,13 @@ test("concatenate two files", async (t) => {
 		globConcat(
 			["./fixtures/file-1.md", "./fixtures/file-2.md"],
 			"./expected/concat.md",
-			{ fs: fs }
+			{ fs: fs },
 		)
 			.then((result) => {
 				t.is(
 					result.content,
-					readFile(`./expected/concat.md`),
-					"content matches"
+					readFile("./expected/concat.md"),
+					"content matches",
 				);
 				t.assert(result.map, "sourcemap content matches");
 			})
@@ -62,7 +62,7 @@ test("concatenate with globs", async (t) => {
 				t.is(
 					result.inputFiles.length,
 					2,
-					"number of input files found matches expected"
+					"number of input files found matches expected",
 				);
 				t.is(result.content, readFile(output), "content matches");
 				t.assert(result.map, "sourcemap exists");
@@ -81,13 +81,13 @@ test("concatenate with globs to stdout", async (t) => {
 				t.is(
 					result.inputFiles.length,
 					2,
-					"number of input files found matches expected"
+					"number of input files found matches expected",
 				);
 				// Check the stdout for the expected content
 				t.is(
 					result.content,
-					readFile(`./expected/concat-stdout.css`),
-					"content matches"
+					readFile("./expected/concat-stdout.css"),
+					"content matches",
 				);
 			})
 			// No errors should be thrown, so fail the test if one is
@@ -110,7 +110,7 @@ test("empty file with error", async (t) => {
 		.catch((error) => {
 			t.is(
 				error.message,
-				MESSAGES.empty_file("./fixtures/file-empty.md", process.cwd())
+				MESSAGES.empty_file("./fixtures/file-empty.md", process.cwd()),
 			);
 		});
 });
