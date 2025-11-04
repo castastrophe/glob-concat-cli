@@ -71,6 +71,10 @@
     {
       "type": "github",
       "url": " https://github.com/sponsors/castastrophe"
+    },
+    {
+      "type": "buy-me-a-coffee",
+      "url": "https://www.buymeacoffee.com/castastrophe"
     }
   ],
   "lint-staged": {

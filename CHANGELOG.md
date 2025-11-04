@@ -1,9 +1,8 @@
 ## [1.0.2](https://github.com/castastrophe/glob-concat-cli/compare/v1.0.1...v1.0.2) (2025-11-04)
 
-
 ### Bug Fixes
 
-* linted all assets with updated tooling ([51a1c0c](https://github.com/castastrophe/glob-concat-cli/commit/51a1c0cf93e6e5aeccaf23a9b98484a729c45e8e))
+- linted all assets with updated tooling ([51a1c0c](https://github.com/castastrophe/glob-concat-cli/commit/51a1c0cf93e6e5aeccaf23a9b98484a729c45e8e))
 
 # Change log
 
