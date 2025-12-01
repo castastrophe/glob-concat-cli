@@ -1,13 +1,15 @@
+<img src="https://repository-images.githubusercontent.com/690650165/91f13310-76b3-43ff-b7ab-53daa21a90ce" alt=""/>
+
 # glob-concat-cli
 
 > A command-line interface for concatenating files leveraging [fast-glob](https://github.com/mrmlnc/fast-glob#fast-glob).
 
 ## Key features
 
-- Concatenates files on the command line
+- Quick and easy concatenation of files on the command line
 - Supports robust glob patterns via [fast-glob](https://github.com/mrmlnc/fast-glob#pattern-syntax)
-- Allows empty files to be ignored (great for use with automated build tools)
-- Can output to stdout or a file
+- Automatically ignores empty files by default (great for use with automated build tools)
+- Can output to stdout or a new or existing file
 - Provides a sourcemap for the concatenated files by default
 
 ## Install
@@ -19,6 +21,8 @@ npm install --dev glob-concat-cli
 ```sh
 yarn add --dev glob-concat-cli
 ```
+
+Currently, this project supports node v22 and v24. We plan to deprecate support for node v22 by March of 2026.
 
 ## API
 
@@ -60,7 +64,7 @@ When leveraging this package, you can also pass in any of the options supported 
 
 Due to how this utility is built, the following options are not supported:
 
-- `onlyDirectories` (this is always set to `false` because this utility is meant to concatenate files)
+- `onlyDirectories` (this is always set to `false` because this utility is meant to concatenate files only)
 - `stats`
 - `objectMode`
 
