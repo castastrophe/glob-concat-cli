@@ -44,8 +44,6 @@ jobs:
             node_modules
           key: ubuntu-latest-node${{ matrix.node-version }}-${{ hashFiles('yarn.lock') }}
 
-      ## --- INSTALL --- ##
-      # If statement isn't needed here b/c yarn will leverage the cache if it exists
       - name: Install dependencies
         shell: bash
         run: yarn install --immutable
