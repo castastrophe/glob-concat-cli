@@ -2394,6 +2394,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-visitor-keys@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "eslint-visitor-keys@npm:5.0.1"
+  checksum: 10c0/16190bdf2cbae40a1109384c94450c526a79b0b9c3cb21e544256ed85ac48a4b84db66b74a6561d20fe6ab77447f150d711c2ad5ad74df4fcc133736bce99678
+  languageName: node
+  linkType: hard
+
 "eslint@npm:^8.57.1":
   version: 8.57.1
   resolution: "eslint@npm:8.57.1"
@@ -2917,7 +2924,7 @@ __metadata:
     eslint-plugin-jsonc: "npm:^2.21.0"
     fast-glob: "npm:^3.3.3"
     husky: "npm:^9.1.7"
-    jsonc-eslint-parser: "npm:^2.4.2"
+    jsonc-eslint-parser: "npm:^3.0.0"
     lint-staged: "npm:^16.2.7"
     markdownlint: "npm:^0.40.0"
     markdownlint-cli: "npm:^0.48.0"
@@ -3666,7 +3673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-eslint-parser@npm:^2.4.0, jsonc-eslint-parser@npm:^2.4.2":
+"jsonc-eslint-parser@npm:^2.4.0":
   version: 2.4.2
   resolution: "jsonc-eslint-parser@npm:2.4.2"
   dependencies:
@@ -3675,6 +3682,17 @@ __metadata:
     espree: "npm:^9.0.0"
     semver: "npm:^7.3.5"
   checksum: 10c0/821af0231cb8eba2afde34535bd76d723ed5b4b3711fdccff3f300f32de7bbf463ceab3ce2de9e6fd78dc3b24a9c7248ca12eb43e280cfa2695f49bd16908f87
+  languageName: node
+  linkType: hard
+
+"jsonc-eslint-parser@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "jsonc-eslint-parser@npm:3.1.0"
+  dependencies:
+    acorn: "npm:^8.5.0"
+    eslint-visitor-keys: "npm:^5.0.0"
+    semver: "npm:^7.3.5"
+  checksum: 10c0/9af0aa3abf946f306ce823ccde33ab7d91cf215e1af26d33b2f65e9e230552bfa40aa93859b91aabf96738c66357a598cc7b2275ba99839ef4afd84edda3b11e
   languageName: node
   linkType: hard
 
