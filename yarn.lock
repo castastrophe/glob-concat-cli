@@ -1560,7 +1560,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brace-expansion@npm:^5.0.2, brace-expansion@npm:^5.0.5":
+"brace-expansion@npm:^5.0.5":
   version: 5.0.5
   resolution: "brace-expansion@npm:5.0.5"
   dependencies:
@@ -1898,7 +1898,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^14.0.3, commander@npm:~14.0.2":
+"commander@npm:^14.0.3, commander@npm:~14.0.3":
   version: 14.0.3
   resolution: "commander@npm:14.0.3"
   checksum: 10c0/755652564bbf56ff2ff083313912b326450d3f8d8c85f4b71416539c9a05c3c67dbd206821ca72635bf6b160e2afdefcb458e86b317827d5cb333b69ce7f1a24
@@ -2982,7 +2982,7 @@ __metadata:
     jsonc-eslint-parser: "npm:^2.4.2"
     lint-staged: "npm:^16.2.7"
     markdownlint: "npm:^0.40.0"
-    markdownlint-cli: "npm:^0.47.0"
+    markdownlint-cli: "npm:^0.48.0"
     mock-fs: "npm:^5.5.0"
     prettier: "npm:^3.7.4"
     prettier-package-json: "npm:^2.8.0"
@@ -4221,7 +4221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:~14.1.0":
+"markdown-it@npm:~14.1.1":
   version: 14.1.1
   resolution: "markdown-it@npm:14.1.1"
   dependencies:
@@ -4237,25 +4237,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdownlint-cli@npm:^0.47.0":
-  version: 0.47.0
-  resolution: "markdownlint-cli@npm:0.47.0"
+"markdownlint-cli@npm:^0.48.0":
+  version: 0.48.0
+  resolution: "markdownlint-cli@npm:0.48.0"
   dependencies:
-    commander: "npm:~14.0.2"
+    commander: "npm:~14.0.3"
     deep-extend: "npm:~0.6.0"
     ignore: "npm:~7.0.5"
     js-yaml: "npm:~4.1.1"
     jsonc-parser: "npm:~3.3.1"
     jsonpointer: "npm:~5.0.1"
-    markdown-it: "npm:~14.1.0"
+    markdown-it: "npm:~14.1.1"
     markdownlint: "npm:~0.40.0"
-    minimatch: "npm:~10.1.1"
+    minimatch: "npm:~10.2.4"
     run-con: "npm:~1.3.2"
-    smol-toml: "npm:~1.5.2"
+    smol-toml: "npm:~1.6.0"
     tinyglobby: "npm:~0.2.15"
   bin:
     markdownlint: markdownlint.js
-  checksum: 10c0/466e2e0f288844a129bfcbdbfb1f08fef81e42f6c0d9760fc3d9a8e668cfc34fdfd055f08d780b9bc73abad7d5827eb94ec100405b38cde1eadadca66bfe0188
+  checksum: 10c0/dc4da23adeb3a5b466bdce1be8aad58daf9b1be5be7de082d1ca22a6842e85000327ac592df038a9c89ef397bedb0ffd5c6c345fc245f9017572a24db25fac20
   languageName: node
   linkType: hard
 
@@ -4692,7 +4692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.3, minimatch@npm:^10.1.1, minimatch@npm:^10.2.2, minimatch@npm:^10.2.4":
+"minimatch@npm:^10.0.3, minimatch@npm:^10.1.1, minimatch@npm:^10.2.2, minimatch@npm:^10.2.4, minimatch@npm:~10.2.4":
   version: 10.2.5
   resolution: "minimatch@npm:10.2.5"
   dependencies:
@@ -4716,15 +4716,6 @@ __metadata:
   dependencies:
     brace-expansion: "npm:^2.0.2"
   checksum: 10c0/0b6a58530dbb00361745aa6c8cffaba4c90f551afe7c734830bd95fd88ebf469dd7355a027824ea1d09e37181cfeb0a797fb17df60c15ac174303ac110eb7e86
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:~10.1.1":
-  version: 10.1.3
-  resolution: "minimatch@npm:10.1.3"
-  dependencies:
-    brace-expansion: "npm:^5.0.2"
-  checksum: 10c0/374603b9e2a3a4339001f8d6943fad944906751c92b459ea0362ec93ec478009b4238a368bed9141763626210b6f0b84f9c48f295a6f87c5d35f9aa452e0a4bc
   languageName: node
   linkType: hard
 
@@ -6133,10 +6124,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"smol-toml@npm:~1.5.2":
-  version: 1.5.2
-  resolution: "smol-toml@npm:1.5.2"
-  checksum: 10c0/ccfe5dda80c1d0c45869140b1e695a13a81ba7c57c1ca083146fe2f475d6f57031c12410f95d53a5acb3a1504e8e8e12cab36871909e8c8ce0c7011ccd22a2ac
+"smol-toml@npm:~1.6.0":
+  version: 1.6.1
+  resolution: "smol-toml@npm:1.6.1"
+  checksum: 10c0/511a78722f99c7616fdb46af708de3d7e81434b5a3d58061166da73f28bfc6cae4f0cd04683f60515b9c490cd10152fce72287c960b337419c0299cc1f0f2a22
   languageName: node
   linkType: hard
 
