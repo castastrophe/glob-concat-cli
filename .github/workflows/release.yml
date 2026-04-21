@@ -49,7 +49,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Semantic release
-        uses: cycjimmy/semantic-release-action@v5
+        uses: cycjimmy/semantic-release-action@v6.0.0
         with:
           semantic_version: 25
         env:
