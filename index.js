@@ -74,7 +74,7 @@ export default async function (
 		try {
 			base64 = Buffer.from(sourcemap)?.toString("base64");
 		}
-		catch (e) {
+		catch {
 			/* empty */
 		}
 
